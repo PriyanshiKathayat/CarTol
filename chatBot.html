@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Comparison ChatBot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    .chat-container {
+      width: 400px;
+      height: 500px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .chat-box .msg {
+      margin: 10px 0;
+    }
+
+    .bot {
+      background: #e0e0e0;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 80%;
+      margin-bottom: 10px;
+    }
+
+    .user {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      align-self: flex-end;
+      max-width: 80%;
+      margin-bottom: 10px;
+    }
+
+    .input-box {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+    }
+
+    .input-box input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .input-box button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      border: none;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .input-box button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Car Comparison ChatBot</h2>
+  <div class="chat-container">
+    <div class="chat-box" id="chatBox">
+      <div class="msg bot">Hi! I'm your CarBot 🤖<br>Ask me to compare cars or suggest one under your budget.</div>
+    </div>
+    <div class="input-box">
+      <input type="text" id="userInput" placeholder="Type your question...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const chatBox = document.getElementById('chatBox');
+      const userText = input.value.trim();
+
+      if (userText === "") return;
+
+    
+      const userMsg = document.createElement('div');
+      userMsg.classList.add('msg', 'user');
+      userMsg.textContent = userText;
+      chatBox.appendChild(userMsg);
+
+
+      let botReply = getBotResponse(userText);
+
+      const botMsg = document.createElement('div');
+      botMsg.classList.add('msg', 'bot');
+      botMsg.innerHTML = botReply;
+      chatBox.appendChild(botMsg);
+
+      
+      input.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function getBotResponse(msg) {
+      msg = msg.toLowerCase();
+
+      if (msg.includes("compare") && msg.includes("with")) {
+        const cars = msg.split("compare")[1].split("with");
+        const car1 = cars[0].trim();
+        const car2 = cars[1].trim();
+        return `Here's a quick comparison between <b>${car1}</b> and <b>${car2}</b>:<br>- ${car1}: 18 km/l, ₹8.5L<br>- ${car2}: 20 km/l, ₹9.2L<br>(This is just a demo, real data coming soon!)`;
+      }
+
+      if (msg.includes("best car under")) {
+        const price = msg.match(/\d+/g);
+        return `Some of the best cars under ₹${price[0]} lakhs:<br>- Tata Punch<br>- Hyundai Exter<br>- Maruti Fronx<br>- Kia Sonet`;
+      }
+
+      if (msg.includes("details of") || msg.includes("show") || msg.includes("tell me about")) {
+        const carName = msg.split("of")[1] || msg.split("about")[1];
+        return `Details of <b>${carName.trim()}</b>:<br>- Mileage: 18 km/l<br>- Engine: 1.2L<br>- Price: ₹7.5L<br>- Rating: ⭐⭐⭐⭐`;
+      }
+
+      return `Sorry, I didn't understand that. Try saying:<br>• Compare Swift with Baleno<br>• Best car under 10 lakh<br>• Details of Creta`;
+    }
+  </script>
+
+</body>
+</html>
