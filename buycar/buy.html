@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Cars | AutoMarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .car-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .car-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+        .car-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .car-title {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .car-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+        .car-details {
+            margin-bottom: 15px;
+        }
+        .car-details p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .seller-info {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        .seller-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .no-listings {
+            text-align: center;
+            padding: 40px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .view-all-btn {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .view-all-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Available Cars for Purchase</h1>
+        
+        <div class="car-listings" id="carListingsContainer">
+            <!-- Car listings will be inserted here by JavaScript -->
+        </div>
+        
+        <a href="sell.html" class="view-all-btn">Sell Your Car</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('carListingsContainer');
+            const carListings = JSON.parse(localStorage.getItem('carListings')) || [];
+            
+            if (carListings.length === 0) {
+                container.innerHTML = `
+                    <div class="no-listings">
+                        <h2>No cars available for purchase yet</h2>
+                        <p>Be the first to list your car!</p>
+                        <a href="sell.html" class="view-all-btn">Sell Your Car Now</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = carListings.map(car => `
+                <div class="car-card">
+                    ${car.image ? `<img src="${car.image}" alt="${car.carName}" class="car-image">` : ''}
+                    <h2 class="car-title">${car.carName} (${car.carModel})</h2>
+                    <div class="car-price">₹${Number(car.price).toLocaleString()}</div>
+                    <div class="car-details">
+                        <p><strong>Year:</strong> ${car.carModel}</p>
+                        <p><strong>Age:</strong> ${new Date().getFullYear() - car.carModel} years</p>
+                        <p><strong>Posted:</strong> ${car.datePosted}</p>
+                    </div>
+                    <div class="seller-info">
+                        <p><strong>Seller:</strong> ${car.firstName} ${car.lastName}</p>
+                        <p><strong>Contact:</strong> ${car.phone}</p>
+                        <p><strong>Email:</strong> ${car.email}</p>
+                    </div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>

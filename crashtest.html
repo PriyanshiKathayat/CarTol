@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Safety Crash Test Videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f3f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    .search-bar {
+      text-align: center;
+      padding: 1rem;
+      background: white;
+    }
+    .search-bar input {
+      padding: 8px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .search-bar button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #1a73e8;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    header {
+      background-color: red;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .car-card {
+      background-color: white;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .car-card h3 {
+      margin-top: 0;
+    }
+    .car-video {
+      width: 100%;
+      height: 170px;
+      margin-bottom: 10px;
+    }
+    .car-details {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Car Crash Test Videos</h1>
+  <p>See how different cars perform in crash safety tests</p>
+</header>
+
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search car name..." />
+    <button onclick="searchCars()">Search</button>
+  </div>
+
+
+<div class="container">
+
+  <!-- Car 1 -->
+  <div class="car-card">
+    <h3>Maruti Suzuki Swift (2022)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/PNUPHflTrRA?si=YFwj5D90vx9X0CDW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+       
+      <p><strong>Safety Rating:</strong> 3-Star ★★★☆☆ </p>
+      <p><strong>Child Safety Rating:</strong> 2-Star ★★☆☆☆ </p>
+      <p><strong>No Of AirBags:</strong> 	2 Front Airbags (Driver & Passenger) – Standard
+        <br> <br>	No side or curtain airbags, even on top variants</p>
+      <p><strong> Segment: </strong>	 B2 Segment Hatchback (Premium Hatchback)
+       <br> <br> <strong> Body Style: </strong> 5-door
+
+       <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+
+        </p>
+    </div>
+  </div>
+
+  <!-- Car 2 -->
+  <div class="car-card">
+    <h3>Tata Nexon (2018)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/Tr-4JrTxK-4?si=xbJFKGKd0AzQrbJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 3-Star ★★★☆☆ </p>
+        <p><strong>No Of AirBags:</strong> 	2 AirBags
+            <br><br>
+            Driver Airbag
+           
+          <br> <br>	Front Passenger Airbag </p>
+          
+        <p><strong> Segment: </strong>	 B2-Segment (Subcompact SUV / Compact SUV)
+         <br> <br> <strong> Body Style: </strong> 5-door
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+  
+    </div>
+  </div>
+
+  <!-- Car 3 -->
+  <div class="car-card">
+    <h3>Mahindra XUV300 (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/OzsxpRQtdys?si=w37Jx-TvCLSruduL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong> 2 AirBags (Driver + Front Passenger)
+           
+          <br> <br>	Front Passenger Airbag </p>
+          
+        <p><strong> Segment: </strong>	 B2-Segment (Subcompact SUV / Compact SUV)
+         <br> <br> <strong> Body Style: </strong> 5-door
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 4 -->
+  <div class="car-card">
+    <h3>Tata Punch (2021)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/SSA3Nu6NeTk?si=uCffoImIOsUOHNLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong> 2 AirBags (Driver + Front Passenger)
+           
+          <br> <br>	These are standard across all variants of the 2021 Punch. </p>
+          
+        <p><strong> Segment: </strong>	 Tata Punch belongs to the micro SUV or subcompact crossover segment 
+         <br> <br> <strong> Body Style: </strong> 5-door
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 5 -->
+  <div class="car-card">
+    <h3>Mahindra Thar (2021)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/omW1q05nUak?si=AwDQtVTcFYgDqUo2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★☆</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	2 front airbags (Driver and Front Passenger)
+           
+          <br> <br>	These are standard across all variants. </p>
+          
+        <p><strong> Segment: </strong>	 Lifestyle Off-Road SUV
+
+         <br> <br> <strong> Body Style: </strong> 3-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 6 -->
+  <div class="car-card">
+    <h3>Tata Altroz (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/vWIk64Y0_WY?si=5YaZynJ8lRMyURf9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 3-Star ★★★☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	2 front airbags (Driver and front passenger) across all variants.
+           
+          <br> <br>	No side or curtain airbags in the 2020 model (even top trims) </p>
+          
+        <p><strong> Segment: </strong>	 Premium Hatchback Segment
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  
+  <div class="car-card">
+    <h3>Maruti S-Presso (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/BrOr6Z4cUnw?si=cnZsX6_zgiyvIiRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 1-Star ★☆☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 0-Star ☆☆☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	2 front airbags (Driver and front passenger) 
+           
+          <br> <br>	No side or curtain airbags in the 2020 model</p>
+          
+        <p><strong> Segment: </strong>	 micro SUV or entry-level crossover 
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  
+  <div class="car-card">
+    <h3>Mahindra Scorpio-N (2022)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/IKdpfkOQA84?si=dd7ZlaBjpaqCDZxx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★☆</p>
+        <p><strong>Child Safety Rating:</strong> 3-Star ★★★☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	2 front airbags (Driver and front passenger) 
+           
+          <br> <br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	 Compact Multi-Purpose Vehicle (MPV)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 1 -->
+  <div class="car-card">
+    <h3>Suzuki Ertiga (2022)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/sszFZShWsJI?si=j64qG1HZuJ5FAfKt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★☆</p>
+        <p><strong>Child Safety Rating:</strong> 3-Star ★★★☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	2 front airbags (Driver and front passenger) 
+           
+          <br> <br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	 Compact Multi-Purpose Vehicle (MPV)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <div class="car-card">
+    <h3>Dzire (2018)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/mH0ztaX6xEc?si=X4yVJi-fsGVEZjiR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 2-Star ★★☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 2-Star ★★☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br> <br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	Subcompact Sedan 
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 3 -->
+  <div class="car-card">
+    <h3>Suzuki Maruti Eeco (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/sOgiGIWNX2I?si=Ng2nG9Y3E7UP7h9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 0-Star ☆☆☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 0-Star ☆☆☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br><br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	Microvan / Minivan 
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 4 -->
+  <div class="car-card">
+    <h3>WagonR (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/LPbTvnbQeD4?si=bVmduySVMlmf9DrV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 1-Star ★☆☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 0-Star ☆☆☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br><br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	Compact Hatchback
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 5 -->
+  <div class="car-card">
+    <h3>Baleno (2021)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/obiexQAvSrI?si=9a6ex1RzJu0Xwhfm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 0-Star ☆☆☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 0-Star ☆☆☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br><br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	Premium Hatchback
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 6 -->
+  <div class="car-card">
+    <h3>Maruti Suzuki Alto K10 (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/nJZyk3Th6YA?si=uAEhL3pTrz_aBHe9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 2-Star ★★☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 0-Star ☆☆☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br><br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	Entry-Level Hatchback
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 7 -->
+  <div class="car-card">
+    <h3>Suzuki Swift (2002)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/aXqTisW6plM?si=BbKX2dIqDpqS4aCq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 1-Star ★☆☆☆☆</p>
+        <p><strong>Child Safety Rating:</strong> 1-Star ★☆☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br><br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	 Subcompact Hatchback (B-segment)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 8 -->
+  <div class="car-card">
+    <h3>Ciaz (2004)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/gkV-uB4OzYo?si=8CyYQzTPzNGoWvsF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★☆</p>
+        <p><strong>Child Safety Rating:</strong> 2-Star ★★☆☆☆ </p>
+        <p><strong>No Of AirBags:</strong>	Dual front airbags (driver and passenger)
+           
+          <br><br>	No side or Curtain AirBags</p>
+          
+        <p><strong> Segment: </strong>	Mid-Size Sedan (C2 Segment)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+
+  <!-- Car 1 -->
+  <div class="car-card">
+    <h3>Kia Picanto GT Line (2022)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/8_cADmZ_9iI?si=wPJjjXxIMBkZlpzP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	6 AirBags 
+           
+          <br><br>	dual front, side, and curtain airbags.</p>
+          
+        <p><strong> Segment: </strong>	Subcompact Hatchback/Sedan (B-segment)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 2 -->
+  <div class="car-card">
+    <h3>Kia Rio EX / GT Line (2018)</h3>
+    <iframe width="300" height="170" src="#"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p> <b>No Crash Test Avalable </b></p>
+      <p><strong>Safety Rating:</strong>N/A</p>
+      <p><strong>Child Safety Rating:</strong> N/A </p>
+      <p><strong>No Of AirBags:</strong>	6 AirBags 
+         
+        <br><br>	dual front, side, and curtain airbags.</p>
+        
+      <p><strong> Segment: </strong>  Subcompact Hatchback/Sedan (B-segment)
+
+       <br> <br> <strong> Body Style: </strong> 5-door
+
+
+       <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 3 -->
+  <div class="car-card">
+    <h3>Kia Rio EX / GT Line (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/4gdjhH_Qdos?si=mO6Q7_1JI1VYK9Bp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	6 AirBags 
+           
+          <br><br>	dual front, side, and curtain airbags.</p>
+          
+        <p><strong> Segment: </strong>	Subcompact Hatchback/Sedan (B-segment)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 4 -->
+  <div class="car-card">
+    <h3>Sportage (2022)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/S9tO_c3ws08?si=NiNsfnDr3M0iYQiL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	7 AirBags 
+           
+          <br><br>	Dual front airbags (driver and passenger) <br>
+          Front side airbags <br>
+          Side curtain airbags <br>
+          Driver’s knee airbag</p>
+          
+        <p><strong> Segment: </strong>	Compact Crossover SUV (C-segment)
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 5 -->
+  <div class="car-card">
+    <h3>Telluride (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/v5q8Dthvf2c?si=lgMiLXyoovIg1ThS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★☆</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	7 AirBags 
+           
+          <br><br>	Dual front airbags (driver and passenger) <br>
+          Front side airbags <br>
+          Side curtain airbags <br>
+          Driver’s knee airbag</p>
+          
+        <p><strong> Segment: </strong>	 Mid-size crossover SUV
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 6 -->
+  <div class="car-card">
+    <h3>sorento (2020)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/dQFTymEhdiY?si=SaQ8HHw6WdgBAZzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 4-Star ★★★★☆</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	7 AirBags 
+           
+          <br><br>	Dual front airbags (driver and passenger) <br>
+          Front side airbags <br>
+          Side curtain airbags <br>
+          Driver’s knee airbag</p>
+          
+        <p><strong> Segment: </strong>	  Mid-size crossover SUV
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 7 -->
+  <div class="car-card">
+    <h3>ev9 (2024)</h3>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/rZSTjax680k?si=p9EhKIKx-5Gr27HG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+        <p><strong>Safety Rating:</strong> 5-Star ★★★★★</p>
+        <p><strong>Child Safety Rating:</strong> 4-Star ★★★★☆ </p>
+        <p><strong>No Of AirBags:</strong>	10 AirBags 
+           
+          <br><br>		Dual front advanced airbags
+       
+          
+          
+        Front center airbag<br>
+        Dual front seat-mounted side airbags <br>
+        Driver’s knee airbag<br>
+        Full-length side curtain airbags</p>
+          
+        <p><strong> Segment: </strong>	  Large SUV
+
+         <br> <br> <strong> Body Style: </strong> 5-door
+
+  
+         <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+
+  <!-- Car 8 -->
+  <div class="car-card">
+    <h3>Kia Sonnet (2004)</h3>
+    <iframe width="300" height="170" src="#" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="car-details">
+      <p> <b>No Crash Test Avalable </b></p>
+      <p><strong>Safety Rating:</strong> N/A</p>
+      <p><strong>Child Safety Rating:</strong> N/A</p>
+      <p><strong>No Of AirBags:</strong> 6 AirBags 
+         
+        <br><br>		Dual front airbags
+        
+        	Side curtain airbags <br>
+        Front side airbags <br>
+        Front seat-mounted side airbags <br>
+        Driver’s knee airbag</p>
+        
+      <p><strong> Segment: </strong> Subcompact SUV (B-segment)
+
+       <br> <br> <strong> Body Style: </strong> 5-door
+
+
+       <br> <br> <strong> ABS: </strong> Yes with EBD (Electronic Brakeforce Distribution)
+    </div>
+  </div>
+</div>
+
+<script>
+    function searchCars() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.getElementsByClassName('car-card');
+  
+      for (let i = 0; i < cards.length; i++) {
+        const title = cards[i].querySelector('h3').innerText.toLowerCase();
+        cards[i].style.display = title.includes(input) ? 'block' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>

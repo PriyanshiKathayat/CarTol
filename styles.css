@@ -1,0 +1,487 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #d32f2f;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+#search-link {
+    display: inline-block;
+    width: 300px;
+    height: 80px;
+    background-color: #c62828;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#search-link:hover {
+    transform: scale(1.05);
+    background-color: #b71c1c;
+}
+
+/* Navigation */
+.nav-bar {
+    background-color: #d32f2f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: #d32f2f;
+}
+
+/* Main Content */
+section {
+    padding: 60px 0;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.car-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.car-card h3 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.car-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d32f2f;
+    margin: 10px 0;
+}
+
+.car-card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Form Styles */
+.form-step {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.form-step h2 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-step label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-step input,
+.form-step select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.form-step input:focus,
+.form-step select:focus {
+    border-color: #d32f2f;
+    outline: none;
+}
+
+.next-button, #filter-cars {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.next-button:hover, #filter-cars:hover {
+    background-color: #b71c1c;
+}
+
+/* Comparison Section */
+.comparison-section {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.comparison-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d32f2f;
+}
+
+.comparison-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.compare-select {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-width: 250px;
+    font-size: 1rem;
+}
+
+#compare-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#compare-button:hover {
+    background-color: #b71c1c;
+}
+
+.comparison-results {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.comparison-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 320px;
+}
+
+.comparison-card h3 {
+    color: #d32f2f;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comparison-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.comparison-spec {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+/* Chatbot Styles */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.chat-icon:hover {
+    transform: scale(1.1);
+    background-color: #b71c1c;
+}
+
+.chat-icon i {
+    font-size: 24px;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.chat-header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.msg {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+
+.bot {
+    background: #e0e0e0;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.user {
+    background: #d32f2f;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #d32f2f;
+}
+
+.input-box button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-box button:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-button {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .compare-select {
+        width: 100%;
+    }
+
+    .chat-container {
+        width: 90%;
+        right: 5%;
+        bottom: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header h3 {
+        font-size: 1.2rem;
+    }
+    
+    #search-link {
+        width: 90%;
+        height: 70px;
+        line-height: 70px;
+    }
+    
+    .form-step {
+        padding: 20px;
+    }
+}

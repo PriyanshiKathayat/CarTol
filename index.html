@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Comparison Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Auto-Bazzar</h1>
+            <h3>Find Your Perfect Car</h3>
+            <div class="hero">
+                <h4>Pride with India</h4>
+            </div>
+            <a href="#car-selection-form" id="search-link">Search your Car</a>
+        </header>
+        
+        <nav class="nav-bar">
+            <ul class="nav-buttons">
+                <li><a href="#" class="nav-button" onclick="scrollToTop()">
+                    <i class="fa fa-home"></i> Home
+                </a></li>
+                <li><a href="#compare-car" class="nav-button">Compare Car</a></li>
+               
+             <li><a href="crashtest.html" class="nav-button">Crash Test Videos</a></li>
+                <li><a href="#" class="nav-button" onclick="scrollToFooter()">About Us</a></li>
+                <li><a href="sell car login/sell.html" class="nav-button">Sell your car</a></li>
+                <li><a href="buycar/buy.html" class="nav-button">Buy a Second Hand Car</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="car-available" class="car-grid"></section>
+            
+            <section id="car-selection-form">
+                <div class="form-step active" id="step-budget">
+                    <h2>Find Your Perfect Car</h2>
+                    <label for="budget">Enter Your Budget (₹):</label>
+                    <input type="number" id="budget" min="0" max="5000000" placeholder="Enter budget">
+                    <button id="next-step-1" class="next-button">Next</button>
+                </div>
+                
+                <div class="form-step" id="step-type" style="display:none;">
+                    <label for="type">Select Car Type:</label>
+                    <select id="type">
+                        <option value="">Any Type</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="MPV">MPV</option>
+                        <option value="Off-roader">Off-roader</option>
+                    </select>
+                    <button id="next-step-2" class="next-button">Next</button>
+                </div>
+                
+                <div class="form-step" id="step-fuel" style="display:none;">
+                    <label for="fuel">Fuel Type:</label>
+                    <select id="fuel">
+                        <option value="">Any Fuel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Petrol/CNG">Petrol/CNG</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                    <button id="next-step-3" class="next-button">Next</button>
+                </div>
+                
+                <div class="form-step" id="step-priority" style="display:none;">
+                    <label for="priority">Choose Your Priority:</label>
+                    <select id="priority">
+                        <option value="Safety">Safety</option>
+                        <option value="Mileage">High Mileage</option>
+                        <option value="Price">Lowest Price</option>
+                        <option value="Interior">Interior Quality</option>
+                    </select>
+                    <button id="filter-cars">Find Cars</button>
+                </div>
+            </section>
+            
+            <section id="car-recommendations" class="car-grid"></section>
+            
+            <section id="compare-car" class="comparison-section">
+                <h2>Compare Cars</h2>
+                <div class="comparison-controls">
+                    <select id="compare-car-1" class="compare-select">
+                        <option value="">Select First Car</option>
+                    </select>
+                    <select id="compare-car-2" class="compare-select">
+                        <option value="">Select Second Car</option>
+                    </select>
+                    <button id="compare-button">Compare</button>
+                </div>
+                <div id="comparison-results" class="comparison-results"></div>
+            </section>
+            
+            <section id="crash-test-videos">
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <h2>About Us</h2>
+            <p>Contact us: CodeXplopreres@gmail.com</p>
+            <p>This website belongs to only Indian automobile brands.</p>
+            <p>Copyright © 2025 CarTol. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chat-icon" onclick="toggleChat()">
+        <i class="fas fa-robot"></i>
+    </div>
+  
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">CarBot 🤖</div>
+        <div class="chat-box" id="chatBox">
+            <div class="msg bot">Hi! I'm GOKU 🤖<br>Ask me to compare cars or suggest one under your budget.</div>
+        </div>
+        <div class="input-box">
+            <input type="text" id="userInput" placeholder="Type your question..." onkeydown="if(event.key==='Enter') sendMessage();">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
