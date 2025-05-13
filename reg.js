@@ -1,7 +1,5 @@
 function validateForm() {
   const name = document.getElementById("name").value.trim();
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
   const phone = document.getElementById("phone").value.trim();
   const email = document.getElementById("email").value.trim();
 
@@ -21,16 +19,6 @@ function validateForm() {
     return false;
   }
 
-  if (password.length < 6) {
-    alert("Password must be at least 6 characters long.");
-    return false;
-  }
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match. Please re-enter.");
-    return false;
-  }
-
   return true;
 }
 
@@ -40,16 +28,5 @@ function handleSubmit() {
     window.location.href = "index.html";
   } else {
     form.reportValidity();
-  }
-}
-
-function togglePassword(fieldId, eyeIcon) {
-  const field = document.getElementById(fieldId);
-  if (field.type === "password") {
-    field.type = "text";
-    eyeIcon.textContent = "🙈";
-  } else {
-    field.type = "password";
-    eyeIcon.textContent = "👁️";
   }
 }

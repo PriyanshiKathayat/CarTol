@@ -30,7 +30,7 @@
         <option value="+61">🇦🇺 +61</option>
         <option value="+81">🇯🇵 +81</option>
       </select>
-      <input type="text" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{6,12}">
+      <input type="text" id="phone" name="phone" placeholder="Enter Mobile Number" required pattern="[0-9]{6,12}">
     </div>
 
     <label for="country">Country:</label>
@@ -84,19 +84,6 @@
 
     <label for="address">City</label>
     <textarea id="city" name="city" rows="2" placeholder="Enter City" required></textarea>
-
-    <!-- Password fields added below -->
-    <label for="password">Password:</label>
-    <div class="password-wrapper">
-      <input type="password" id="password" name="password" placeholder="Enter Password" required>
-      <span class="toggle-eye" onclick="togglePassword('password', this)">👁️</span>
-    </div>
-
-    <label for="confirmPassword">Confirm Password:</label>
-    <div class="password-wrapper">
-      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
-      <span class="toggle-eye" onclick="togglePassword('confirmPassword', this)">👁️</span>
-    </div>
 
     <div class="button-wrapper">
       <button type="button" onclick="handleSubmit()">Register</button>
